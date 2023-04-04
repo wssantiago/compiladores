@@ -10,22 +10,26 @@ def read_input():
     return ans
 
 def operate(stack, e):
-    operand_2 = stack.pop()
-    operand_1 = stack.pop()
+    if len(stack) >= 2:
+        operand_2 = stack.pop()
+        operand_1 = stack.pop()
 
-    if e == '^':
-        res = operand_1 ** operand_2
-    elif e == '*':
-        res = operand_1 * operand_2
-    elif e == '/':
-        res = operand_1 / operand_2
-    elif e == '-':
-        res = operand_1 - operand_2
-    elif e == '+':
-        res = operand_1 + operand_2
-
-    stack.append(res)
-    return stack
+        if e == '^':
+            res = operand_1 ** operand_2
+        elif e == '*':
+            res = operand_1 * operand_2
+        elif e == '/':
+            res = operand_1 / operand_2
+        elif e == '-':
+            res = operand_1 - operand_2
+        elif e == '+':
+            res = operand_1 + operand_2
+        else: 
+            res = operand_1 + operand_2 # default operation for unknown operator
+        
+        stack.append(res)
+        return stack
+    return None
 
 def rpn(exp):
     stack = []
@@ -35,8 +39,10 @@ def rpn(exp):
             stack.append(int(e))
         else:
             stack = operate(stack, e)
+            if not stack:
+                return "Invalid RPN expression"
 
-    return stack.pop()
+    return stack.pop() if len(stack) == 1 else "Invalid RPN expression"
 
 exp = read_input()
 result = rpn(exp)
