@@ -1,4 +1,5 @@
 def read_input():
+    print("Input any well formed expression in reverse polished notation:\n")
     entry = input()
     ans = []
 
@@ -39,4 +40,4 @@ def rpn(exp):
 
 exp = read_input()
 result = rpn(exp)
-print(result)
+print("The result for the inputed expression is: ", result)
