@@ -1,6 +1,6 @@
 ### Task01: RPNStacker Adhoc [Python 3.10.6]
 
-Esse script em python implementa uma estrutura de pilha para resolver expressões no formato RPN. Para testar, execute o arquivo (task01)[./task01.py] e alimente-o com uma expressão no formato RPN seguida de 'end' para indicar seu final:
+Esse script em python implementa uma estrutura de pilha para resolver expressões no formato RPN. Para testar, execute o arquivo [task01](./task01.py) e alimente-o com uma expressão no formato RPN seguida de 'end' para indicar seu final:
 
 ```
 3
