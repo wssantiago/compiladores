@@ -1,4 +1,4 @@
-### Task 03 - RPNStacker Automatic/Regex Scanning
+## Task 03 - RPNStacker Automatic/Regex Scanning
 
 Nessa atividade, implementa-se as mesmas features da [task02](../task02). No entanto, a validação das string numéricas e dos caracteres operadores é feita utilizando regex. No diretório [regex](./src/rpn/regex), a classe implementa dois métodos para validação de operandos numéricos e operadores:
 
