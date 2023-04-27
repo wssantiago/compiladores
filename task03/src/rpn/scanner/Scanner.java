@@ -34,6 +34,7 @@ public class Scanner {
 
 		} catch (IOException e) {
 			System.err.format("IOException: %s%n", e);
+			return null;
 		}
 		
 		return this.lines;
