@@ -22,3 +22,5 @@ public class Regex {
 ```
 
 Em ```isNum```, a string *integer* define uma expressão regular para inteiros positivos ou negativos (caso seja informado o caractere '-'). Já a string *floating* define uma regex para validar pontos flutuantes. Agora, no método ```isOP```, a string *ops* determina os caracteres operadores suportados pelo analisador RPN: exponenciação, multiplicação, divisão, adição e subtração.
+
+O retorno desses dois métodos é computado na classe [Scanner](./src/rpn/scanner/Scanner.java) para corretamente tokenizar a entrada do arquivo correspondente à expressão a ser avaliada em Reverse Polish Notation.
